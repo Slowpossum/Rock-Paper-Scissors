@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors Part 1</title>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+    <script src="./assets/scripts/RPS.js" defer></script>
+    <script src="./assets/scripts/firebase.js" defer></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="./assets/CSS/reset.css">
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+</head>
+
+<body>
+    <div id="overlay">
+        <div>
+            <p>Enter nickname:</p>
+            <form>
+                <input type="text" id="nickName">
+                <input type="submit" id="nickNameSubmit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <div class="center">
+        <div class="margin">
+            <div style="display: flex">
+                <h1 id="playerTag"></h1>
+                <i id="playerReady" class="fa-3x fas fa-check" style="color: green; display: none;"></i>
+                <i id="playerNotReady" class="fa-3x fas fa-times" style="color: red; width: 48px"></i>
+            </div>
+            <div id="player" class="border">
+            </div>
+
+            <div class="center">
+                <button id="ready">Ready</button>
+                <button id="rock" class="imgButton" value="rock"></button>
+                <button id="paper" class="imgButton" value="paper"></button>
+                <button id="scissors" class="imgButton" value="scissors"></button>
+            </div>
+        </div>
+
+        <div>
+            <div style="display: flex">
+                <h1 id="opponentTag"></h1>
+                <i id="opponentReady" class="fa-3x fas fa-check" style="color: green; display: none;"></i>
+                <i id="opponentNotReady" class="fa-3x fas fa-times" style="color: red; width: 48px;"></i>
+            </div>
+            <div id="opponent" class="border"></div>
+        </div>
+    </div>
+
+    <div id="outcome" class="center border">
+        <table class="tableFormatting">
+            <tr>
+                <th id="scoreLeft">0</th>
+                <th>:</th>
+                <th id="scoreRight">0</th>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

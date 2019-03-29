@@ -1,0 +1,136 @@
+/* 
+/
+/ CLASSES
+/
+*/
+body, html {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+
+
+/* 
+/
+/ CLASSES
+/
+*/
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.imgButton {
+    height: 50px;
+    width: 50px;
+    margin: 0px 40px 0px 40px;
+    border: none;
+    outline: none;
+}
+
+.imgButton:active {
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+.border {
+    border: 5px black solid;
+}
+
+.margin {
+    margin-right: 10px;
+}
+
+.tableFormatting {
+    height: 50px;
+    width: 200px;
+}
+
+.fas {
+    margin-top: 10px;
+}
+
+
+
+
+/* 
+/
+/ IDS
+/
+*/
+#player {
+    height: 500px;
+    width: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#opponent {
+    height: 550px;
+    width: 550px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#playerTag, #opponentTag {
+    font-size: 30px;
+    line-height: 50px;
+    font-weight: 900;
+    height: 50px;
+    max-width: 470px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+#outcome {
+    height: 50px;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 10px;
+    line-height: 50px;
+}
+
+#rock {
+    background-image: url("../Images/rock.png");
+    background-size: cover;
+}
+
+#paper {
+    background-image: url("../Images/paper.png");
+    background-size: cover;
+}
+
+#scissors {
+    background-image: url("../Images/scissors.png");
+    background-size: cover;
+}
+
+#overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#overlay p {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+#overlay div {
+    border-radius: 15px;
+    width: 270px;
+    height: 100px;
+    background-color: white;
+    opacity: 1;
+    margin: 0 auto;
+    padding: 50px 0 0 30px;
+    margin-top: 200px;
+}
+
+#ready {
+    margin-top: 5px;
+}
