@@ -94,17 +94,17 @@ body, html {
 }
 
 #rock {
-    background-image: url("../Images/rock.png");
+    background-image: url("../images/rock.png");
     background-size: cover;
 }
 
 #paper {
-    background-image: url("../Images/paper.png");
+    background-image: url("../images/paper.png");
     background-size: cover;
 }
 
 #scissors {
-    background-image: url("../Images/scissors.png");
+    background-image: url("../images/scissors.png");
     background-size: cover;
 }
 
