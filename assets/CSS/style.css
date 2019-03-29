@@ -134,3 +134,15 @@ body, html {
 #ready {
     margin-top: 5px;
 }
+
+#scoreLeft {
+    color: green;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+#scoreRight {
+    color: red;
+    font-size: 20px;
+    font-weight: 800;
+}

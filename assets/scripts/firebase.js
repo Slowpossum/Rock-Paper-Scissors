@@ -30,7 +30,7 @@ database.ref("/player1").on("value", function (snapshot) {
         }
 
         if(!snapshot.exists()) {
-            resetAll();
+            resetOpponent();
         }
     }
 });
@@ -53,7 +53,7 @@ database.ref("/player2").on("value", function (snapshot) {
         }
 
         if(!snapshot.exists()) {
-            resetAll();
+            resetOpponent();
         }
     }
 });
@@ -72,7 +72,22 @@ database.ref("/player1/ready").on("value", function (snapshot) {
     }
 
     if (rpsGame.ready === true && rpsGame.opponentReady === true && rpsGame.countdown.counting === false) {
-        evaluateOutcome();
+        rpsGame.countdown.counting = true;
+
+        interval = setInterval(function () {
+            if (rpsGame.ready === true && rpsGame.opponentReady === true) {
+                rpsGame.countdown.time--;
+            } else {
+                rpsGame.countdown.counting = false;
+                rpsGame.countdown.time = 5;
+                clearInterval(interval);
+            }
+
+            if (rpsGame.countdown.time === 0){
+                clearInterval(interval);
+                evaluateOutcome();
+            }
+        }, 1000);
     }
 });
 
@@ -90,6 +105,21 @@ database.ref("/player2/ready").on("value", function (snapshot) {
     }
 
     if (rpsGame.ready === true && rpsGame.opponentReady === true && rpsGame.countdown.counting === false) {
-        evaluateOutcome();
+        rpsGame.countdown.counting = true;
+
+        interval = setInterval(function () {
+            if (rpsGame.ready === true && rpsGame.opponentReady === true) {
+                rpsGame.countdown.time--;
+            } else {
+                rpsGame.countdown.counting = false;
+                rpsGame.countdown.time = 5;
+                clearInterval(interval);
+            }
+
+            if (rpsGame.countdown.time === 0){
+                clearInterval(interval);
+                evaluateOutcome();
+            }
+        }, 1000);
     }
 });
